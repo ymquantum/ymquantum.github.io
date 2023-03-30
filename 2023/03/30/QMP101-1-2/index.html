@@ -24,7 +24,7 @@
 
   
 
-  <title>Archives | Quantum Elf</title>
+  <title>§ I-II One-body / two-body operators | Quantum Elf</title>
 
   
 
@@ -32,6 +32,10 @@
     <link rel="shortcut icon" href="/favicon.ico">
   
 
+   
+    <!--mathjax latex数学公式显示支持-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   
 
   
@@ -48,9 +52,9 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://cdn.donmai.us/original/1e/91/__elysia_and_elysia_honkai_and_1_more_drawn_by_hamilundenongdizhe__1e91c361ecfbd61f95be0e920f285249.jpg)"></div>
+    <div class="post-image" style="background-image: url(https://cdn.donmai.us/original/8f/5e/__elysia_and_elysia_honkai_and_1_more_drawn_by_go_satoshi_ko__8f5e361156930f76981fb0f827da53bf.png)"></div>
   
 
   <!-- navbar -->
@@ -98,40 +102,233 @@
 
   
   
-
-  
-  
     <div class="header-content">
-      <div class="post-text layout-block layout-padding">
-        <h1 class="title-wrap">Archives</h1>
-        
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">§ I-II One-body / two-body operators</h1>
+          <h2 class="title-sub-wrap">
+            <strong>沙绘那</strong>
+            <span> created on </span>
+            <time  class="article-date" datetime="2023-03-30T01:09:39.000Z" itemprop="datePublished">2023-03-30</time>
+          </h2>
+          
+          
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/QuantumManyBodyPhysics/">📒 QuantumManyBodyPhysics</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/SecondQuantization/">🏷️ SecondQuantization</a></li>
+  
+</ul>
+        </div>
       </div>
     </div>
+  
+
+  
   
   
 </header>
 
-    <!-- 分页(其他自定义页面) -->
+    <!-- 文章 -->
 
-<!-- 自定义页面 -->
-
+<!-- 文章内容 -->
 <div class="body-container">
   <article class="content-container layout-block post-container">
     <div class="article-info">
       
+      
+      
+      
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1><span id="2023">2023</span></h1>
+        <blockquote>
+<p><strong>This note belongs to <a href="/2023/03/30/QMP101-0/" title="[C] Quantum Many-body Physics 101">[C] Quantum Many-body Physics 101</a>.</strong></p>
+</blockquote>
+<!-- toc -->
 <ul>
-<li><a href="/2023/03/30/QMP101-0/" title="[C] Quantum Many-body Physics 101">[C] Quantum Many-body Physics 101</a></li>
+<li><a href="#1-coordinate-transformation">1. Coordinate
+transformation</a></li>
+<li><a href="#2-single-body-operator">2. Single-body operator</a></li>
+<li><a href="#3-two-body-operator">3. Two-body operator</a></li>
 </ul>
+<!-- tocstop -->
+<h1><span id="1-coordinate-transformation">1. Coordinate transformation</span></h1>
+<p>Considering two different basises, <span class="math inline">\(\sum_{\alpha}|\alpha\rangle\langle\alpha | =
+1\)</span> and <span class="math inline">\(\sum_{\beta}|\beta\rangle\langle\beta | =
+1\)</span>, then <span class="math display">\[
+|\alpha\rangle = \sum_{\beta}|\beta\rangle\langle\beta|\alpha\rangle
+\]</span> If we view <span class="math inline">\(|\alpha\rangle\)</span>
+as <span class="math inline">\(a_{\alpha}^{\dagger}|0\rangle\)</span>,
+i.e. we create the single-particle state <span class="math inline">\(|\alpha\rangle\)</span> by a creation operator,
+then <span class="math display">\[
+a_{\alpha}^{\dagger}|0\rangle = \sum_{\beta}a_{\beta}^{\dagger}|0\rangle
+\langle\beta|\alpha\rangle
+\]</span> or <span class="math display">\[
+\begin{split}
+a_{\alpha}^{\dagger} = \sum_{\beta}\langle\beta|\alpha\rangle
+a_{\beta}^{\dagger} \\
+a_{\alpha} = \sum_{\beta}\langle\alpha|\beta\rangle a_{\beta}
+\end{split}
+\]</span> Specifically, if <span class="math inline">\(\beta \equiv
+\vec{r}\)</span> we have <span class="math display">\[
+\begin{split}
+&amp; a_{\alpha} = \int d\vec{r}\ \langle  \alpha|\vec{r}\rangle
+\hat{\psi}(\vec{r}) = \int d\vec{r}\  \psi_{\alpha}^{*}(\vec{r})
+\hat{\psi}(\vec{r}) \\
+&amp; \hat{\psi}(\vec{r}) = \sum_{\alpha}\langle \vec{r}|\alpha\rangle
+a_{\alpha} = \sum_{\alpha} \psi_{\alpha} (\vec{r}) a_{\alpha}
+\end{split}
+\]</span> If <span class="math inline">\(\alpha \equiv \vec{k}\)</span>,
+then <span class="math display">\[
+\langle \vec{r}|\vec{k} \rangle = \frac{1}{\sqrt{V}}e^{i\vec{k}\cdot
+\vec{r}}
+\]</span> and <span class="math display">\[
+\hat{\psi}(\vec{r}) = \sum_{\vec{k}}\langle \vec{r}|\vec{k}\rangle
+a_{\vec{k}} = \frac{1}{\sqrt{V}}\sum_{\vec{k}} a_{\vec{k}}
+e^{i\vec{k}\cdot \vec{r}}
+\]</span></p>
+<p>where <span class="math inline">\(V\)</span> is some normalized
+factor.</p>
+<h1><span id="2-single-body-operator">2. Single-body operator</span></h1>
+<blockquote>
+<p>We only consider bosons here. The discussion for fermions is similar
+(pay attention to the sign when exchanging two fermionic operators) and
+will lead to exactly the same form with the bosons'.</p>
+</blockquote>
+<p>Suppose we have <span class="math inline">\(N\)</span> particles, and
+<span class="math inline">\(N\)</span> single-body operators <span class="math inline">\(\hat{h}\)</span>, whose spectrum expansion is
+<span class="math display">\[
+\hat{h} = \sum_{\alpha} \lambda_{\alpha}|\alpha\rangle\langle\alpha|
+\]</span> we expect <span class="math inline">\(\hat{H} = \sum_{i = 1}^
+N\hat{h}_i = \sum_{\alpha}\lambda_{\alpha} \hat{n}_{\alpha}\)</span>
+because the expected value <span class="math display">\[
+\langle \{n_{\alpha}\} | \hat{H} | \{n_{\alpha} \} \rangle =
+\sum_{\alpha} \lambda_{\alpha} n_{\alpha}
+\]</span> is exactly what we want.</p>
+<p>Then <span class="math display">\[
+\begin{split}
+\hat{H} =&amp; \sum_{\alpha} \lambda_{\alpha} a_{\alpha}^{\dagger}
+a_{\alpha} \\
+= &amp; \sum_{\alpha} \langle \alpha|\hat{h}|\alpha\rangle
+a_{\alpha}^{\dagger} a_{\alpha} \\
+= &amp; \sum_{\alpha\beta}a_{\alpha}^{\dagger} \langle \alpha |\hat{h}
+|\beta\rangle a_{\beta}
+\end{split}
+\]</span> or <span class="math display">\[
+\hat{H} = \sum_{\alpha\beta}a_{\alpha}^{\dagger} \langle \alpha |\hat{h}
+|\beta\rangle a_{\beta},\qquad [▲]
+\]</span> <strong>[▲] is a general form</strong> and is independent of
+the choice of basis.</p>
+<p>To prove that, considering another basis <span class="math inline">\(\sum_{\gamma}|\gamma\rangle
+\langle\gamma|\)</span>, then we find <span class="math display">\[
+\hat{H} = \sum_{\alpha\beta\gamma} a_{\alpha}^{\dagger}\langle {\alpha}
+|\gamma\rangle \langle \gamma |\hat{h} |\beta\rangle a_{\beta} =
+\sum_{\beta\gamma} a_{\gamma}^{\dagger}\langle \gamma
+|\hat{h}|\beta\rangle a_{\beta}
+\]</span> If <span class="math inline">\(\alpha=\vec{r}\)</span> and
+<span class="math inline">\(\beta=\vec{r}&#39;\)</span> in [▲], we get
+<span class="math display">\[
+\hat{H} = \int d\vec{r}d\vec{r}&#39;\ \hat{\psi}^{\dagger}(\vec{r})
+\langle \vec{r} | \hat{h}|\vec{r}&#39;\rangle\hat{\psi}(\vec{r}&#39;)
+\]</span> Specifically, if <span class="math inline">\(\hat{h} =
+V(\vec{r})\)</span>, then <span class="math display">\[
+\hat{H} = \int d\vec{r}\ \hat{\psi}^{\dagger}(\vec{r})
+V(\vec{r})\hat{\psi}(\vec{r})
+\]</span></p>
+<h1><span id="3-two-body-operator">3. Two-body operator</span></h1>
+<p>We similarly consider the two-body operator <span class="math inline">\(\hat{h}^2\)</span>, whose specturm expansion is
+<span class="math display">\[
+\hat{h}^2 = \sum_{\alpha\beta}
+|\alpha\rangle|\beta\rangle\langle\alpha|\langle\beta|\lambda_{\alpha\beta}
+\]</span></p>
+<blockquote>
+<p>Note that not all <span class="math inline">\(\hat{h}^2\)</span> can
+be expressed as above, but it is sufficient to consider this form within
+our discussions.</p>
+</blockquote>
+<p>For <span class="math inline">\(N\)</span> particles, we have <span class="math display">\[
+\begin{split}
+\hat{H}^2 = &amp;
+\sum_{\alpha&lt;\beta} \lambda_{\alpha\beta}
+\hat{n}_{\alpha}\hat{n}_{\beta}
++ \sum_{\alpha=\beta} \lambda_{\alpha\beta}
+\frac{\hat{n}_{\alpha}(\hat{n}_{\alpha}-1)}{2} \\
+= &amp;
+\frac{1}{2} \bigg[\sum_{\alpha\ne\beta} \lambda_{\alpha\beta}
+\hat{n}_{\alpha}\hat{n}_{\beta}
++ \sum_{\alpha=\beta} \lambda_{\alpha\beta}
+{\hat{n}_{\alpha}(\hat{n}_{\alpha}-1)}\bigg] \\
+= &amp;
+\frac{1}{2} \bigg[\sum_{\alpha\ne\beta} \lambda_{\alpha\beta}
+a^{\dagger}_{\alpha}a_{\alpha}
+a^{\dagger}_{\beta}a_{\beta}
++ \sum_{\alpha=\beta} \lambda_{\alpha\beta}
+a^{\dagger}_{\alpha}a_{\alpha}(a^{\dagger}_{\alpha}a_{\alpha}-1) \bigg]
+\\
+= &amp;
+\frac{1}{2} \sum_{\alpha\beta} \lambda_{\alpha\beta}
+a^{\dagger}_{\alpha}a^{\dagger}_{\beta}a_{\alpha}
+a_{\beta} \\
+= &amp; \hat{H}^2 =
+\frac{1}{2}\sum_{\alpha\beta}a_{\alpha}^{\dagger}a_{\beta}^{\dagger}\langle
+\alpha\beta|\hat{h}^2|\alpha\beta\rangle a_{\beta}a_{\alpha}
+\end{split}
+\]</span> where we use the relation <span class="math inline">\([a_{\alpha},a_{\alpha}^{\dagger}]=1\)</span>.</p>
+<p>We can similarly prove that <span class="math display">\[
+\hat{H}^2 =
+\frac{1}{2}\sum_{\alpha\beta\gamma\delta}a_{\alpha}^{\dagger}a_{\beta}^{\dagger}\langle
+\alpha\beta|\hat{h}^2|\gamma\delta\rangle a_{\delta}a_{\gamma}
+\]</span> is independent of the choice of basis.</p>
+<p>Specifically, if <span class="math inline">\(\hat{h}^2\)</span> is
+the Coloumb potential, i.e. <span class="math display">\[
+\hat{h}^2 = U(\vec{r}-\vec{r}&#39;) = \frac{e^2}{|\vec{r} -
+\vec{r}&#39;|}
+\]</span> We have <span class="math display">\[
+\hat{H}^2 = \frac{1}{2}\int d\vec{r}d\vec{r}&#39;\
+\hat{\psi}^{\dagger}(\vec{r})\hat{\psi}^{\dagger}(\vec{r}&#39;)
+\frac{e^2}{|\vec{r}-\vec{r}&#39;|} \hat{\psi}(\vec{r&#39;})
+\hat{\psi}(\vec{r})
+\]</span></p>
 
       </section>
 
       
       
+        <nav class="article-nav">
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2023/03/30/QMP101-1-1/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">§ I-I Annihilation / creation operators</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
 
-      
-      
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
     </div>
     <div class="widget-info">
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -168,6 +365,20 @@
     </div>
   </div>
 </section>
+
+      
+<section class="widget-toc widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-toc" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M134.50666666 767.46666668H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.23999999v50.13333333c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H134.50666666c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.13333333c0.10666668-27.73333333 22.50666668-50.24000001 50.24000001-50.24000001zM84.37333332 541.65333333h326.18666669c27.73333333 0 50.24000001 22.39999999 50.23999999 50.13333334v50.24000001c0 27.73333333-22.50666668 50.24000001-50.24000002 50.23999999H84.37333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.23999999v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333334zM134.50666666 315.83999999H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.24000001v50.24000001c0 27.73333333-22.50666668 50.13333334-50.24000001 50.13333333H134.50666666c-27.73333333 0-50.24000001-22.39999999-50.23999999-50.13333333v-50.24000001c0.10666668-27.84000001 22.50666668-50.24000001 50.24000001-50.23999999zM209.81333332 89.91999999h326.18666671c27.73333333 0 50.24000001 22.39999999 50.23999997 50.13333335v50.23999999c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H209.81333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333333zM692.05333333 623.36l274.66666669 176.00000002c23.36000001 14.93333333 30.08 45.97333334 15.14666666 69.33333332L954.77333334 910.93333333c-14.93333333 23.25333334-45.97333334 30.08-69.33333335 15.14666667l-274.66666666-176c-23.36000001-14.93333333-30.08-45.97333334-15.14666667-69.33333333l27.09333334-42.24000001c14.93333333-23.36000001 46.08000001-30.08 69.33333333-15.14666666z" fill="currentColor"></path>
+</svg>
+    <span>TOC</span>
+  </div>
+  <div class="widget-body">
+    
+  </div>
+</section>
+
 
       
 <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -231,7 +442,6 @@
     </div>
   </article>
 </div>
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">
