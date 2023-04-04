@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="default">
 <head>
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#3367D6"/>
@@ -39,17 +39,14 @@
   
 
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@1.1.3/index.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/monokai.css">
-  
 
   
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-cb.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 <body>
-  <div class="root-container">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="root-container">
     
 <!-- header container -->
 <header class="header-container post">
@@ -114,7 +111,7 @@
           
             <h2 class="title-sub-wrap new-date">
               <span> updated on </span>
-              <time  class="article-updated" datetime="2023-04-03T10:49:19.152Z" itemprop="dateUpdated">2023-04-03</time>
+              <time  class="article-updated" datetime="2023-04-03T14:22:46.102Z" itemprop="dateUpdated">2023-04-03</time>
             </h2>
           
           
@@ -135,7 +132,9 @@
 
   
   
-  
+ 
+
+
 </header>
 
     <!-- 文章 -->
@@ -160,9 +159,15 @@
 <li>中文测试・English test・日本語テスト；</li>
 <li><font color="#dd0000">红色测试
 </font>・<strong>粗体测试</strong>・<em>斜体测试</em>・<u>下划线测试</u></li>
-<li>代码测试:</li>
+<li>代码测试（C++）</li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  cout &lt;&lt; <span class="string">&quot;Welcome to Q-Elf!&quot;</span> &lt;&lt; endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main()&#123;
+  cout &lt;&lt; &quot;Welcome to Q-Elf!&quot; &lt;&lt; endl;
+  return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><p>内嵌代码测<code>int main()</code>试；</p></li>
 <li><p>LaTeX测试：</p></li>
@@ -184,7 +189,7 @@ i \hbar \frac{\partial}{\partial t}|\Psi\rangle = \hat{H}
 <li>内联LaTeX测试<span class="math inline">\(\sqrt{x}\)</span>；</li>
 </ul>
 <blockquote>
-<p>之前使用自带的marked来渲染公式，包括自行配置layout里的js文件在内尝试了很多手段，都没能解决公式显示异常的问题。在换成了pandoc之后，终于完美解决了。</p>
+<p>在把marked在换成了pandoc来渲染公式后，之前内联公式的bug以及符号冲突的问题都完美解决了，但是我的代码高亮没了，先凑合吧嘤嘤嘤。</p>
 </blockquote>
 <h1><span id="2-媒体测试">2. 媒体测试</span></h1>
 <ul>
@@ -221,13 +226,13 @@ i \hbar \frac{\partial}{\partial t}|\Psi\rangle = \hat{H}
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
   <div class="widget-body">
     
-      <img src="https://cdn.donmai.us/original/ea/f7/__rikka__eaf7ccdc224de37542275b3e36e6fc1f.jpg" class="soft-size--round soft-style--box" alt="帕皮波波罗">
+      <img src="https://cdn.donmai.us/original/1d/28/__elysia_elysia_elysia_and_elf_elysia_honkai_and_1_more__1d28fe9cb4575b16482f1b7ba6f4cfb6.jpg" class="soft-size--round soft-style--box" alt="帕皮波波罗">
     
     
       <h2>帕皮波波罗</h2>
     
     
-      <p>MORE IS DIFFERENT.</p>
+      <p>爱莉希雅天下第一！</p>
     
 
     <div class="count-box">
@@ -385,6 +390,7 @@ i \hbar \frac{\partial}{\partial t}|\Psi\rangle = \hat{H}
 
 
   
-  <!-- 尾部用户自定义相关内容 -->
+  <!-- 尾部用户自定义相关内容 --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 </body>
 </html>
